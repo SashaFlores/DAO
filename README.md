@@ -21,13 +21,13 @@ Installation:
 
     git clone git@github.com:SashaFlores/DAO.git && cd
 
-    dependencies:
+dependencies:
 
-        yarn
+    yarn
 
-    test
+test
 
-        yarn hardhat test
+    yarn hardhat test
 
 ### Note: 
 
