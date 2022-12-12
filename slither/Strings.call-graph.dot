@@ -1,0 +1,17 @@
+strict digraph {
+subgraph cluster_7788_Strings {
+label = "Strings"
+"7788_slitherConstructorConstantVariables" [label="slitherConstructorConstantVariables"]
+"7788_toHexString" [label="toHexString"]
+"7788_toString" [label="toString"]
+"7788_toHexString" -> "7788_toHexString"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"require(bool,string)" 
+"byte(uint256,uint256)" 
+"mstore8(uint256,uint256)" 
+"7788_toString" -> "byte(uint256,uint256)"
+"7788_toHexString" -> "require(bool,string)"
+"7788_toString" -> "mstore8(uint256,uint256)"
+}
+}

@@ -1,0 +1,179 @@
+strict digraph {
+subgraph cluster_5568_ERC20Votes {
+label = "ERC20Votes"
+"5568_checkpoints" [label="checkpoints"]
+"5568_getPastVotes" [label="getPastVotes"]
+"5568_delegates" [label="delegates"]
+"5568__moveVotingPower" [label="_moveVotingPower"]
+"5568_delegateBySig" [label="delegateBySig"]
+"5568__afterTokenTransfer" [label="_afterTokenTransfer"]
+"5568__burn" [label="_burn"]
+"5568__checkpointsLookup" [label="_checkpointsLookup"]
+"5568__subtract" [label="_subtract"]
+"5568_delegate" [label="delegate"]
+"5568__writeCheckpoint" [label="_writeCheckpoint"]
+"5568__add" [label="_add"]
+"5568_numCheckpoints" [label="numCheckpoints"]
+"5568_getPastTotalSupply" [label="getPastTotalSupply"]
+"5568__unsafeAccess" [label="_unsafeAccess"]
+"5568__mint" [label="_mint"]
+"5568__delegate" [label="_delegate"]
+"5568__maxSupply" [label="_maxSupply"]
+"5568_getVotes" [label="getVotes"]
+"5568__delegate" -> "5568_delegates"
+"5568__burn" -> "5568__writeCheckpoint"
+"5568_delegate" -> "5568__msgSender"
+"5568_delegateBySig" -> "5568__useNonce"
+"5568__writeCheckpoint" -> "5568__unsafeAccess"
+"5568__checkpointsLookup" -> "5568__unsafeAccess"
+"5568__mint" -> "5568__writeCheckpoint"
+"5568__afterTokenTransfer" -> "5568__afterTokenTransfer"
+"5568__afterTokenTransfer" -> "5568_delegates"
+"5568__delegate" -> "5568__moveVotingPower"
+"5568_getPastTotalSupply" -> "5568__checkpointsLookup"
+"5568__afterTokenTransfer" -> "5568__moveVotingPower"
+"5568_delegateBySig" -> "5568__hashTypedDataV4"
+"5568__burn" -> "5568__burn"
+"5568__mint" -> "5568_totalSupply"
+"5568__mint" -> "5568__maxSupply"
+"5568__delegate" -> "5568_balanceOf"
+"5568__moveVotingPower" -> "5568__writeCheckpoint"
+"5568_delegate" -> "5568__delegate"
+"5568__mint" -> "5568__mint"
+"5568_getPastVotes" -> "5568__checkpointsLookup"
+"5568_delegateBySig" -> "5568__delegate"
+}subgraph cluster_8517_EIP712 {
+label = "EIP712"
+"8517_constructor" [label="constructor"]
+"8517__buildDomainSeparator" [label="_buildDomainSeparator"]
+"8517__hashTypedDataV4" [label="_hashTypedDataV4"]
+"8517__domainSeparatorV4" [label="_domainSeparatorV4"]
+"8517__hashTypedDataV4" -> "8517__domainSeparatorV4"
+"8517__domainSeparatorV4" -> "8517__buildDomainSeparator"
+"8517_constructor" -> "8517__buildDomainSeparator"
+}subgraph cluster_5765_ERC20Permit {
+label = "ERC20Permit"
+"5765_DOMAIN_SEPARATOR" [label="DOMAIN_SEPARATOR"]
+"5765__useNonce" [label="_useNonce"]
+"5765_nonces" [label="nonces"]
+"5765_permit" [label="permit"]
+"5765_constructor" [label="constructor"]
+"5765_permit" -> "5765__hashTypedDataV4"
+"5765_permit" -> "5765__useNonce"
+"5765_constructor" -> "5765_constructor"
+"5765_DOMAIN_SEPARATOR" -> "5765__domainSeparatorV4"
+"5765_permit" -> "5765__approve"
+}subgraph cluster_4871_IERC20 {
+label = "IERC20"
+"4871_balanceOf" [label="balanceOf"]
+"4871_totalSupply" [label="totalSupply"]
+"4871_transferFrom" [label="transferFrom"]
+"4871_transfer" [label="transfer"]
+"4871_approve" [label="approve"]
+"4871_allowance" [label="allowance"]
+}subgraph cluster_4165_IVotes {
+label = "IVotes"
+"4165_getPastVotes" [label="getPastVotes"]
+"4165_delegate" [label="delegate"]
+"4165_delegateBySig" [label="delegateBySig"]
+"4165_delegates" [label="delegates"]
+"4165_getPastTotalSupply" [label="getPastTotalSupply"]
+"4165_getVotes" [label="getVotes"]
+}subgraph cluster_5801_IERC20Permit {
+label = "IERC20Permit"
+"5801_DOMAIN_SEPARATOR" [label="DOMAIN_SEPARATOR"]
+"5801_nonces" [label="nonces"]
+"5801_permit" [label="permit"]
+}subgraph cluster_5593_IERC20Metadata {
+label = "IERC20Metadata"
+"5593_symbol" [label="symbol"]
+"5593_decimals" [label="decimals"]
+"5593_name" [label="name"]
+}subgraph cluster_7539_Context {
+label = "Context"
+"7539__msgSender" [label="_msgSender"]
+"7539__msgData" [label="_msgData"]
+}subgraph cluster_11416_GovernanceToken {
+label = "GovernanceToken"
+"11416_constructor" [label="constructor"]
+"11416__burn" [label="_burn"]
+"11416__mint" [label="_mint"]
+"11416_slitherConstructorConstantVariables" [label="slitherConstructorConstantVariables"]
+"11416__afterTokenTransfer" [label="_afterTokenTransfer"]
+"11416__burn" -> "11416__burn"
+"11416_constructor" -> "11416_constructor"
+"11416__mint" -> "11416__mint"
+"11416_constructor" -> "11416__mint"
+"11416__afterTokenTransfer" -> "11416__afterTokenTransfer"
+}subgraph cluster_4793_ERC20 {
+label = "ERC20"
+"4793_totalSupply" [label="totalSupply"]
+"4793_transferFrom" [label="transferFrom"]
+"4793__spendAllowance" [label="_spendAllowance"]
+"4793__afterTokenTransfer" [label="_afterTokenTransfer"]
+"4793_name" [label="name"]
+"4793_decreaseAllowance" [label="decreaseAllowance"]
+"4793__mint" [label="_mint"]
+"4793_increaseAllowance" [label="increaseAllowance"]
+"4793__approve" [label="_approve"]
+"4793_symbol" [label="symbol"]
+"4793__beforeTokenTransfer" [label="_beforeTokenTransfer"]
+"4793_decimals" [label="decimals"]
+"4793_allowance" [label="allowance"]
+"4793_approve" [label="approve"]
+"4793__burn" [label="_burn"]
+"4793__transfer" [label="_transfer"]
+"4793_balanceOf" [label="balanceOf"]
+"4793_constructor" [label="constructor"]
+"4793_transfer" [label="transfer"]
+"4793_increaseAllowance" -> "4793__approve"
+"4793_transferFrom" -> "4793__spendAllowance"
+"4793__transfer" -> "4793__afterTokenTransfer"
+"4793__mint" -> "4793__afterTokenTransfer"
+"4793__burn" -> "4793__afterTokenTransfer"
+"4793__spendAllowance" -> "4793_allowance"
+"4793__mint" -> "4793__beforeTokenTransfer"
+"4793__burn" -> "4793__beforeTokenTransfer"
+"4793_approve" -> "4793__approve"
+"4793_decreaseAllowance" -> "4793_allowance"
+"4793_transferFrom" -> "4793__transfer"
+"4793_transfer" -> "4793__msgSender"
+"4793_decreaseAllowance" -> "4793__msgSender"
+"4793__spendAllowance" -> "4793__approve"
+"4793_approve" -> "4793__msgSender"
+"4793_decreaseAllowance" -> "4793__approve"
+"4793_transfer" -> "4793__transfer"
+"4793_transferFrom" -> "4793__msgSender"
+"4793_increaseAllowance" -> "4793_allowance"
+"4793__transfer" -> "4793__beforeTokenTransfer"
+"4793_increaseAllowance" -> "4793__msgSender"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"abi.encode()" 
+"require(bool,string)" 
+"keccak256(bytes)" 
+"mstore(uint256,uint256)" 
+"keccak256(uint256,uint256)" 
+"5568__unsafeAccess" -> "keccak256(uint256,uint256)"
+"8517_constructor" -> "keccak256(bytes)"
+"4793__burn" -> "require(bool,string)"
+"11416_slitherConstructorConstantVariables" -> "keccak256(bytes)"
+"5568_delegateBySig" -> "abi.encode()"
+"4793__spendAllowance" -> "require(bool,string)"
+"5568_delegateBySig" -> "keccak256(bytes)"
+"5568__unsafeAccess" -> "mstore(uint256,uint256)"
+"5765_permit" -> "keccak256(bytes)"
+"8517__buildDomainSeparator" -> "keccak256(bytes)"
+"4793__approve" -> "require(bool,string)"
+"4793__mint" -> "require(bool,string)"
+"4793__transfer" -> "require(bool,string)"
+"5568_getPastVotes" -> "require(bool,string)"
+"5568__mint" -> "require(bool,string)"
+"5765_permit" -> "require(bool,string)"
+"5765_permit" -> "abi.encode()"
+"5568_delegateBySig" -> "require(bool,string)"
+"4793_decreaseAllowance" -> "require(bool,string)"
+"5568_getPastTotalSupply" -> "require(bool,string)"
+"8517__buildDomainSeparator" -> "abi.encode()"
+}
+}

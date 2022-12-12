@@ -1,0 +1,12 @@
+{
+    "detectors_to_exclude": "too-many-digits,similar-names,dead-code,solc-version,pragma,naming-convention,assembly",
+    "printers_to_run": "call-graph,contract-summary,human-summary,inheritance-graph,variable-order,evm",
+    "exclude_informational": true,
+    "exclude_low": true,
+    "solc_working_dir": "contracts",
+    "solc_solcs_select": "0.8.7",
+    "hardhat_cache_directory": "cache",
+    "hardhat_artifacts_directory": "artifacts",
+    "filter_paths": "openzeppelin", 
+    "json": ""
+}

@@ -1,0 +1,146 @@
+strict digraph {
+subgraph cluster_388_IAccessControl {
+label = "IAccessControl"
+"388_getRoleAdmin" [label="getRoleAdmin"]
+"388_hasRole" [label="hasRole"]
+"388_revokeRole" [label="revokeRole"]
+"388_grantRole" [label="grantRole"]
+"388_renounceRole" [label="renounceRole"]
+}subgraph cluster_8553_IERC165 {
+label = "IERC165"
+"8553_supportsInterface" [label="supportsInterface"]
+}subgraph cluster_3020_TimelockController {
+label = "TimelockController"
+"3020_getTimestamp" [label="getTimestamp"]
+"3020_constructor" [label="constructor"]
+"3020_onERC1155Received" [label="onERC1155Received"]
+"3020_isOperationPending" [label="isOperationPending"]
+"3020_isOperationDone" [label="isOperationDone"]
+"3020_isOperation" [label="isOperation"]
+"3020__execute" [label="_execute"]
+"3020_cancel" [label="cancel"]
+"3020_updateDelay" [label="updateDelay"]
+"3020_scheduleBatch" [label="scheduleBatch"]
+"3020_schedule" [label="schedule"]
+"3020_execute" [label="execute"]
+"3020_executeBatch" [label="executeBatch"]
+"3020_hashOperation" [label="hashOperation"]
+"3020_onERC721Received" [label="onERC721Received"]
+"3020__schedule" [label="_schedule"]
+"3020_supportsInterface" [label="supportsInterface"]
+"3020__beforeCall" [label="_beforeCall"]
+"3020_getMinDelay" [label="getMinDelay"]
+"3020_onERC1155BatchReceived" [label="onERC1155BatchReceived"]
+"3020_receive" [label="receive"]
+"3020_isOperationReady" [label="isOperationReady"]
+"3020__afterCall" [label="_afterCall"]
+"3020_hashOperationBatch" [label="hashOperationBatch"]
+"3020_scheduleBatch" -> "3020_hashOperationBatch"
+"3020_isOperationReady" -> "3020_getTimestamp"
+"3020__schedule" -> "3020_getMinDelay"
+"3020_schedule" -> "3020_hashOperation"
+"3020_supportsInterface" -> "3020_supportsInterface"
+"3020_execute" -> "3020__beforeCall"
+"3020__beforeCall" -> "3020_isOperationDone"
+"3020_execute" -> "3020__afterCall"
+"3020__afterCall" -> "3020_isOperationReady"
+"3020_schedule" -> "3020__schedule"
+"3020_executeBatch" -> "3020__beforeCall"
+"3020_execute" -> "3020_onlyRoleOrOpenRole"
+"3020_schedule" -> "3020_onlyRole"
+"3020_execute" -> "3020_hashOperation"
+"3020_scheduleBatch" -> "3020_onlyRole"
+"3020_constructor" -> "3020__setupRole"
+"3020_executeBatch" -> "3020_hashOperationBatch"
+"3020_cancel" -> "3020_onlyRole"
+"3020_execute" -> "3020__execute"
+"3020_constructor" -> "3020__setRoleAdmin"
+"3020_executeBatch" -> "3020__execute"
+"3020_scheduleBatch" -> "3020__schedule"
+"3020_cancel" -> "3020_isOperationPending"
+"3020__schedule" -> "3020_isOperation"
+"3020_executeBatch" -> "3020__afterCall"
+"3020_isOperation" -> "3020_getTimestamp"
+"3020_isOperationDone" -> "3020_getTimestamp"
+"3020_isOperationPending" -> "3020_getTimestamp"
+"3020_executeBatch" -> "3020_onlyRoleOrOpenRole"
+"3020__beforeCall" -> "3020_isOperationReady"
+}subgraph cluster_4206_IERC1155Receiver {
+label = "IERC1155Receiver"
+"4206_onERC1155Received" [label="onERC1155Received"]
+"4206_onERC1155BatchReceived" [label="onERC1155BatchReceived"]
+}subgraph cluster_315_AccessControl {
+label = "AccessControl"
+"315_getRoleAdmin" [label="getRoleAdmin"]
+"315__grantRole" [label="_grantRole"]
+"315_revokeRole" [label="revokeRole"]
+"315_grantRole" [label="grantRole"]
+"315__revokeRole" [label="_revokeRole"]
+"315__checkRole" [label="_checkRole"]
+"315__setRoleAdmin" [label="_setRoleAdmin"]
+"315__setupRole" [label="_setupRole"]
+"315_renounceRole" [label="renounceRole"]
+"315_supportsInterface" [label="supportsInterface"]
+"315_hasRole" [label="hasRole"]
+"315__setupRole" -> "315__grantRole"
+"315__checkRole" -> "315__msgSender"
+"315_revokeRole" -> "315__revokeRole"
+"315__setRoleAdmin" -> "315_getRoleAdmin"
+"315_grantRole" -> "315_getRoleAdmin"
+"315__revokeRole" -> "315__msgSender"
+"315_revokeRole" -> "315_onlyRole"
+"315__revokeRole" -> "315_hasRole"
+"315_grantRole" -> "315__grantRole"
+"315__checkRole" -> "315_hasRole"
+"315_supportsInterface" -> "315_supportsInterface"
+"315__grantRole" -> "315_hasRole"
+"315_renounceRole" -> "315__msgSender"
+"315__checkRole" -> "315__checkRole"
+"315_renounceRole" -> "315__revokeRole"
+"315_revokeRole" -> "315_getRoleAdmin"
+"315_grantRole" -> "315_onlyRole"
+"315__grantRole" -> "315__msgSender"
+}subgraph cluster_7539_Context {
+label = "Context"
+"7539__msgSender" [label="_msgSender"]
+"7539__msgData" [label="_msgData"]
+}subgraph cluster_11702_TimeLock {
+label = "TimeLock"
+"11702_constructor" [label="constructor"]
+"11702_slitherConstructorConstantVariables" [label="slitherConstructorConstantVariables"]
+"11702_constructor" -> "11702_constructor"
+}subgraph cluster_5819_IERC721Receiver {
+label = "IERC721Receiver"
+"5819_onERC721Received" [label="onERC721Received"]
+}subgraph cluster_8541_ERC165 {
+label = "ERC165"
+"8541_supportsInterface" [label="supportsInterface"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"abi.encode()" 
+"revert(string)" 
+"require(bool,string)" 
+"keccak256(bytes)" 
+"type()" 
+"abi.encodePacked()" 
+"3020_supportsInterface" -> "type()"
+"3020_hashOperation" -> "keccak256(bytes)"
+"3020_hashOperationBatch" -> "keccak256(bytes)"
+"3020_cancel" -> "require(bool,string)"
+"3020__execute" -> "require(bool,string)"
+"315_renounceRole" -> "require(bool,string)"
+"315_supportsInterface" -> "type()"
+"3020_updateDelay" -> "require(bool,string)"
+"3020__schedule" -> "require(bool,string)"
+"3020_hashOperation" -> "abi.encode()"
+"3020__beforeCall" -> "require(bool,string)"
+"3020_scheduleBatch" -> "require(bool,string)"
+"3020_executeBatch" -> "require(bool,string)"
+"315__checkRole" -> "abi.encodePacked()"
+"3020__afterCall" -> "require(bool,string)"
+"11702_slitherConstructorConstantVariables" -> "keccak256(bytes)"
+"315__checkRole" -> "revert(string)"
+"3020_hashOperationBatch" -> "abi.encode()"
+"8541_supportsInterface" -> "type()"
+}
+}

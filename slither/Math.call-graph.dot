@@ -1,0 +1,27 @@
+strict digraph {
+subgraph cluster_9418_Math {
+label = "Math"
+"9418_average" [label="average"]
+"9418_min" [label="min"]
+"9418_log256" [label="log256"]
+"9418_max" [label="max"]
+"9418_log10" [label="log10"]
+"9418_log2" [label="log2"]
+"9418_ceilDiv" [label="ceilDiv"]
+"9418_sqrt" [label="sqrt"]
+"9418_mulDiv" [label="mulDiv"]
+"9418_log256" -> "9418_log256"
+"9418_log2" -> "9418_log2"
+"9418_log10" -> "9418_log10"
+"9418_sqrt" -> "9418_sqrt"
+"9418_mulDiv" -> "9418_mulDiv"
+"9418_sqrt" -> "9418_min"
+"9418_sqrt" -> "9418_log2"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"mulmod(uint256,uint256,uint256)" 
+"require(bool)" 
+"9418_mulDiv" -> "require(bool)"
+"9418_mulDiv" -> "mulmod(uint256,uint256,uint256)"
+}
+}

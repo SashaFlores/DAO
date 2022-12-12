@@ -1,0 +1,15 @@
+strict digraph {
+subgraph cluster_8002_Timers {
+label = "Timers"
+"8002_setDeadline" [label="setDeadline"]
+"8002_isUnset" [label="isUnset"]
+"8002_isExpired" [label="isExpired"]
+"8002_getDeadline" [label="getDeadline"]
+"8002_reset" [label="reset"]
+"8002_isStarted" [label="isStarted"]
+"8002_isPending" [label="isPending"]
+"8002_isExpired" -> "8002_isStarted"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}
+}

@@ -1,0 +1,33 @@
+strict digraph {
+subgraph cluster_11336_Box {
+label = "Box"
+"11336_retrieve" [label="retrieve"]
+"11336_store" [label="store"]
+"11336_store" -> "11336_onlyOwner"
+}subgraph cluster_7539_Context {
+label = "Context"
+"7539__msgSender" [label="_msgSender"]
+"7539__msgData" [label="_msgData"]
+}subgraph cluster_501_Ownable {
+label = "Ownable"
+"501__transferOwnership" [label="_transferOwnership"]
+"501_renounceOwnership" [label="renounceOwnership"]
+"501_transferOwnership" [label="transferOwnership"]
+"501_owner" [label="owner"]
+"501__checkOwner" [label="_checkOwner"]
+"501_constructor" [label="constructor"]
+"501_constructor" -> "501__transferOwnership"
+"501_constructor" -> "501__msgSender"
+"501__checkOwner" -> "501__msgSender"
+"501_transferOwnership" -> "501_onlyOwner"
+"501_transferOwnership" -> "501__transferOwnership"
+"501_renounceOwnership" -> "501_onlyOwner"
+"501_renounceOwnership" -> "501__transferOwnership"
+"501__checkOwner" -> "501_owner"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"require(bool,string)" 
+"501__checkOwner" -> "require(bool,string)"
+"501_transferOwnership" -> "require(bool,string)"
+}
+}

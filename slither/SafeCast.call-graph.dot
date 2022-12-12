@@ -1,0 +1,136 @@
+strict digraph {
+subgraph cluster_10959_SafeCast {
+label = "SafeCast"
+"10959_toUint112" [label="toUint112"]
+"10959_toUint104" [label="toUint104"]
+"10959_toUint48" [label="toUint48"]
+"10959_toInt200" [label="toInt200"]
+"10959_toUint152" [label="toUint152"]
+"10959_toInt64" [label="toInt64"]
+"10959_toUint136" [label="toUint136"]
+"10959_toUint192" [label="toUint192"]
+"10959_toInt144" [label="toInt144"]
+"10959_toInt72" [label="toInt72"]
+"10959_toInt192" [label="toInt192"]
+"10959_toInt176" [label="toInt176"]
+"10959_toUint208" [label="toUint208"]
+"10959_toInt168" [label="toInt168"]
+"10959_toUint72" [label="toUint72"]
+"10959_toUint8" [label="toUint8"]
+"10959_toInt88" [label="toInt88"]
+"10959_toInt24" [label="toInt24"]
+"10959_toUint32" [label="toUint32"]
+"10959_toInt32" [label="toInt32"]
+"10959_toUint128" [label="toUint128"]
+"10959_toUint176" [label="toUint176"]
+"10959_toUint40" [label="toUint40"]
+"10959_toInt208" [label="toInt208"]
+"10959_toInt152" [label="toInt152"]
+"10959_toUint16" [label="toUint16"]
+"10959_toUint248" [label="toUint248"]
+"10959_toUint240" [label="toUint240"]
+"10959_toUint224" [label="toUint224"]
+"10959_toUint88" [label="toUint88"]
+"10959_toUint96" [label="toUint96"]
+"10959_toInt128" [label="toInt128"]
+"10959_toInt160" [label="toInt160"]
+"10959_toInt16" [label="toInt16"]
+"10959_toUint56" [label="toUint56"]
+"10959_toInt240" [label="toInt240"]
+"10959_toInt104" [label="toInt104"]
+"10959_toUint256" [label="toUint256"]
+"10959_toInt96" [label="toInt96"]
+"10959_toInt216" [label="toInt216"]
+"10959_toInt80" [label="toInt80"]
+"10959_toUint120" [label="toUint120"]
+"10959_toUint200" [label="toUint200"]
+"10959_toUint216" [label="toUint216"]
+"10959_toInt120" [label="toInt120"]
+"10959_toInt256" [label="toInt256"]
+"10959_toInt232" [label="toInt232"]
+"10959_toInt224" [label="toInt224"]
+"10959_toInt184" [label="toInt184"]
+"10959_toInt136" [label="toInt136"]
+"10959_toInt48" [label="toInt48"]
+"10959_toUint24" [label="toUint24"]
+"10959_toUint144" [label="toUint144"]
+"10959_toUint168" [label="toUint168"]
+"10959_toInt248" [label="toInt248"]
+"10959_toUint160" [label="toUint160"]
+"10959_toInt112" [label="toInt112"]
+"10959_toInt56" [label="toInt56"]
+"10959_toUint80" [label="toUint80"]
+"10959_toUint64" [label="toUint64"]
+"10959_toUint232" [label="toUint232"]
+"10959_toUint184" [label="toUint184"]
+"10959_toInt8" [label="toInt8"]
+"10959_toInt40" [label="toInt40"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"require(bool,string)" 
+"10959_toInt112" -> "require(bool,string)"
+"10959_toUint152" -> "require(bool,string)"
+"10959_toInt72" -> "require(bool,string)"
+"10959_toInt248" -> "require(bool,string)"
+"10959_toUint88" -> "require(bool,string)"
+"10959_toInt40" -> "require(bool,string)"
+"10959_toUint56" -> "require(bool,string)"
+"10959_toUint32" -> "require(bool,string)"
+"10959_toInt168" -> "require(bool,string)"
+"10959_toInt32" -> "require(bool,string)"
+"10959_toUint168" -> "require(bool,string)"
+"10959_toUint24" -> "require(bool,string)"
+"10959_toInt48" -> "require(bool,string)"
+"10959_toUint128" -> "require(bool,string)"
+"10959_toUint248" -> "require(bool,string)"
+"10959_toInt144" -> "require(bool,string)"
+"10959_toInt120" -> "require(bool,string)"
+"10959_toInt128" -> "require(bool,string)"
+"10959_toInt240" -> "require(bool,string)"
+"10959_toInt56" -> "require(bool,string)"
+"10959_toInt88" -> "require(bool,string)"
+"10959_toUint256" -> "require(bool,string)"
+"10959_toUint192" -> "require(bool,string)"
+"10959_toInt104" -> "require(bool,string)"
+"10959_toInt256" -> "require(bool,string)"
+"10959_toUint48" -> "require(bool,string)"
+"10959_toUint136" -> "require(bool,string)"
+"10959_toInt176" -> "require(bool,string)"
+"10959_toUint96" -> "require(bool,string)"
+"10959_toUint8" -> "require(bool,string)"
+"10959_toInt64" -> "require(bool,string)"
+"10959_toUint120" -> "require(bool,string)"
+"10959_toUint72" -> "require(bool,string)"
+"10959_toUint224" -> "require(bool,string)"
+"10959_toUint64" -> "require(bool,string)"
+"10959_toUint80" -> "require(bool,string)"
+"10959_toInt152" -> "require(bool,string)"
+"10959_toInt96" -> "require(bool,string)"
+"10959_toInt232" -> "require(bool,string)"
+"10959_toInt80" -> "require(bool,string)"
+"10959_toUint144" -> "require(bool,string)"
+"10959_toInt24" -> "require(bool,string)"
+"10959_toUint240" -> "require(bool,string)"
+"10959_toUint40" -> "require(bool,string)"
+"10959_toInt208" -> "require(bool,string)"
+"10959_toInt224" -> "require(bool,string)"
+"10959_toUint216" -> "require(bool,string)"
+"10959_toUint184" -> "require(bool,string)"
+"10959_toUint104" -> "require(bool,string)"
+"10959_toInt200" -> "require(bool,string)"
+"10959_toUint16" -> "require(bool,string)"
+"10959_toUint160" -> "require(bool,string)"
+"10959_toUint200" -> "require(bool,string)"
+"10959_toInt136" -> "require(bool,string)"
+"10959_toInt160" -> "require(bool,string)"
+"10959_toInt16" -> "require(bool,string)"
+"10959_toUint208" -> "require(bool,string)"
+"10959_toInt192" -> "require(bool,string)"
+"10959_toUint232" -> "require(bool,string)"
+"10959_toUint112" -> "require(bool,string)"
+"10959_toInt216" -> "require(bool,string)"
+"10959_toInt184" -> "require(bool,string)"
+"10959_toInt8" -> "require(bool,string)"
+"10959_toUint176" -> "require(bool,string)"
+}
+}
