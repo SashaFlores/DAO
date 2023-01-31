@@ -29,7 +29,7 @@
 
 - Install Repo:
 
-        git clone git@github.com:SashaFlores/DAO.git && cd
+        git clone git@github.com:SashaFlores/DAO.git 
 
 - Install dependencies:
 
